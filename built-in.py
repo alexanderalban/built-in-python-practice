@@ -3,6 +3,10 @@
 # The abs function returns the absolute value of a number without it's sign (10 is 10, -10 is also 10). say you're counting how many steps a character
 # was taking in a game. this would allow both forward and backward steps to be counted
 
+from copy import copy
+from shutil import copyfile, copytree
+
+
 print(abs(-10))
 
 steps = -3
@@ -160,3 +164,26 @@ print(revealed)
 
 for x in range(0, len(revealed), 2):
     print(revealed[x])
+
+# Create a program to copy a file
+
+copytest = open('d:\\code\\python-practice\\built-in-python-practice\\copytest.txt', 'w')
+copytest.write('Trying to copy this file. With luck there will be two!')
+copytest.close()
+
+copytest = open('d:\\code\\python-practice\\built-in-python-practice\\copytest.txt')
+copytext = copytest.read()
+print(copytext)
+
+
+def makeacopy(file1):
+    original = open(file1)
+    print(dir(original))
+    dupetext = original.read()
+    print(dupetext)
+    original.close()
+    dupe = open('d:\\code\\python-practice\\built-in-python-practice\\dupe.txt', 'w')
+    dupe.write(str(dupetext))
+    dupe.close()
+
+makeacopy('d:\\code\\python-practice\\built-in-python-practice\\copytest.txt')
