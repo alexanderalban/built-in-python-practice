@@ -51,4 +51,99 @@ print(int(123.45))
 print(int('456'))
 
 # A string containing a floating point number doens't work. It's confusing
-print(int('123.456'))
+# print(int('123.456'))
+
+# The Len Function, short for length. Returns the length of an object or, in the case of a string, returns the number of characters in the string
+
+print(len("This is just a test string"))
+
+power_ranger_list = ["Jason", "Tommy", "Kimberly", "Trini", "Zack", "Billy"]
+print(len(power_ranger_list))
+
+enemy_map = {'Batman' : 'Joker',
+    'Superman' : 'Lex Luthor',
+    'Wonder Woman' : 'Cheetah',
+    "Green Lantern" : 'Sinestro',
+    'Flash' : 'Captain Cold'}
+
+print(len(enemy_map))
+
+# Particularly helpful in loops
+
+fruit = ['apple', 'banana', 'clementine', 'dragon fruit']
+length = len(fruit)
+
+for x in range(0, length):
+    print('the fruit at index %s is %s' % (x, fruit[x]))
+
+# Max and Min functions. Max returns the largest item in a list, tuple, or string. 
+
+numbers = [5, 4, 10, 27, 3]
+print(max(numbers))
+
+print(max(10, 300, 450, 50, 90))
+
+# Min works like max, but returns the smallest
+
+smallnums = [5, 4, 10, 30, 22]
+print(min(smallnums))
+
+# Guessing game where if you guess above the chosen number, all players lose, but if they are all below, all players win. Kind of group Price is Right rules
+
+guess_this_number = 61
+player_guesses = [12, 15, 70, 45]
+if max(player_guesses) > guess_this_number:
+    print('Boom! You all lose.')
+else: print('You win!')
+
+# The Range Function. Mainly used for loops, to loop through a section of code a specific number of times. The paramaters are start and stop. The stop is one less
+# than the second parameter, as code begins at position 0
+
+for x in range(0, 5):
+    print(x)
+
+# Range returns a special object called an iterator that repeats an action a number of times. 
+# Can convert the iterator into a list using the list function
+
+print(list(range(0, 5)))
+
+# Can add a third parameter for range called step. The number 1 is used by default if no step is specified.
+
+count_by_twos = list(range(0, 30, 2))
+print(count_by_twos)
+
+# You can also use negative steps
+count_down_by_twos = list(range(40, 10, -2))
+print(count_down_by_twos)
+
+# The Sum function adds items in a list and returns the total
+
+add_numbers = list(range(0, 500, 50))
+print(add_numbers)
+print(sum(add_numbers))
+
+# Working with files! Let's create a file in notepad and open it using python.
+
+test_file = open('d:\\code\\python-practice\\test-python.txt')
+text = test_file.read()
+print(text)
+
+# Writing to files. We can create a new, empty file by using a second parameter: the string 'w' 
+
+# test_file = open('d:\\code\\python-practice\\mynewshineyfile.txt', 'w')
+
+# Now we write into the file directly
+
+# test_file.write('This is a test file! I did it!')
+# test_file.close
+
+##### More Practice!
+
+# Run this code and see what happens
+
+a = abs(10) + abs(-10)
+print(a)
+
+b = abs(-10) + -10
+print(b)
+
