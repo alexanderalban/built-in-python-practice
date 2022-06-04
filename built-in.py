@@ -147,3 +147,16 @@ print(a)
 b = abs(-10) + -10
 print(b)
 
+# A hidden message. try using dir and help to find out how to break a string into words, and then create a small program to print every other word
+# in the following string, starting with the word (this)
+
+hidden = "this if is you not are a reading very this good then way you to have hide done a it message wrong"
+
+print(dir(hidden))
+# help(hidden.split)
+
+revealed = hidden.split()
+print(revealed)
+
+for x in range(0, len(revealed), 2):
+    print(revealed[x])
